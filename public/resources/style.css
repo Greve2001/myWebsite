@@ -44,6 +44,8 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
 
 em {
     color: #5affe7;
+    font-style: normal;
+    font-weight: bold;
 }
 
 
@@ -182,14 +184,28 @@ footer {
     height: 140px;
     color: #5affe7;
 
-}
-footer i {
-    transition: color 0.2s linear;
-}
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-footer i:hover {
-    color: white;
+    border-top: 2px dashed #37465B;
+
 }
+    .footer-icon-container {
+        width: 30%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        .footer-icon-container i {
+            transition: color 0.2s linear;
+        }
+
+        .footer-icon-container i:hover {
+            color: white;
+        }
                                         /* FOOTER END */
 
 
