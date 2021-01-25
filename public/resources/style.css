@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap'); /* Ubuntu */
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap'); /* Varela */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); /* Varela Round */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /* Open sans */
 
 /*
 font-family: 'Varela Round', sans-serif;
@@ -8,11 +9,16 @@ font-family: 'Ubuntu', sans-serif;
 
 */
 
+:root {
+    /* Navbar */
+    --nav-height: 100px 
+}
+
 * {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    font-family: 'Varela', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     
 }
@@ -34,30 +40,29 @@ h4 {
     font-size: 2.5rem;
 }
 
-p{
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Varela', sans-serif;
+}
+
+p, li, ul{
     font-size: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6, p, li, ul {
     color: white;
+
+    padding: 10px;
 }
 
-em {
+em, strong {
     color: #5affe7;
+    font-size: 2rem;
     font-style: normal;
     font-weight: bold;
 }
 
 
-
-
-
                                         /* NAVBAR */
-
-:root {
-    --nav-height: 100px 
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -172,14 +177,34 @@ em {
     width: 100%;
     height: 1100px;
     background: linear-gradient(135deg, rgba(114,110,255,1) 15%, rgba(90,255,231,1) 25%, rgba(8,198,171,1) 35%, rgba(55,70,91,1) 45%, rgba(33,43,56,1) 65%);
-    z-index: 2;
+    z-index: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
+    .frontpage-banner .banner-text {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        color: white;
+
+        width: 50%;
+    }
 
                                         /* BANNER END */
 
 
                                         /* FOOTER */
 footer {
+    position: relative;
+    top: 100px;
+    
     width: 100%;
     height: 140px;
     color: #5affe7;
@@ -201,12 +226,103 @@ footer {
     }
         .footer-icon-container i {
             transition: color 0.2s linear;
+            padding: 4px;
         }
 
         .footer-icon-container i:hover {
             color: white;
         }
                                         /* FOOTER END */
+
+
+
+
+                                        /* CV GRID */
+main .cv {
+    display: flex;
+    justify-content: center;
+}
+
+    .cv .grid-container {
+        position: relative;
+        top: 100px;
+        width: 100%;
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+    }
+        .cv .cv-grid {
+            width: 70%;
+            height: auto;
+            /* background-color: rgb(54, 54, 54); */
+
+            display: grid;
+            grid-auto-rows: minmax(150px, auto); /* Should be auto at max */
+
+            grid-row-gap: 60px;
+            grid-column-gap: 10px;
+        }
+            .cv .gridingrid {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                grid-row-gap: 10px;
+                grid-column-gap: 10px;
+                margin: 10px;
+                margin-bottom: 100px;
+                /* border: 1px solid black; */
+            }
+
+            .cv .left {
+
+            }
+
+            .cv .right {
+
+            }
+
+
+            .cv .working-history {
+
+            }
+            .cv .education {
+                
+            }
+            .cv .software-experiences {
+
+            }
+
+
+        .cv .date {
+            font-style: italic;
+        }
+        .cv .location {
+            color: #08c6ab;
+        }
+        .cv .title {
+            font-size: 3rem;
+            color: #5affe7;
+            font-weight: bold;
+
+        }
+        .cv .experience {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            font-size: 4rem;
+            font-weight: bold;
+            color: white;
+
+            margin-bottom: 2%;
+        }
+
+        .cv ul {
+            margin-left: 30px;
+        }
+         .cv ul li {
+
+         }
+                                        /* CV GRID END */
 
 
 
