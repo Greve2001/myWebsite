@@ -61,6 +61,15 @@ em, strong {
     font-weight: bold;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    width: 75%;
+}
+
 
                                         /* NAVBAR */
 .navbar {
@@ -253,7 +262,7 @@ main .cv {
         justify-content: center;
     }
         .cv .cv-grid {
-            width: 70%;
+            width: 75%;
             height: auto;
             /* background-color: rgb(54, 54, 54); */
 
@@ -265,10 +274,10 @@ main .cv {
         }
             .cv .gridingrid {
                 display: grid;
-                grid-template-columns: 1fr 3fr;
+                grid-template-columns: 5fr 12fr;
                 grid-row-gap: 10px;
                 grid-column-gap: 10px;
-                margin: 10px;
+                padding: 10px;
                 margin-bottom: 100px;
                 /* border: 1px solid black; */
             }
@@ -295,15 +304,20 @@ main .cv {
 
         .cv .date {
             font-style: italic;
+            padding: 0;
+
         }
         .cv .location {
             color: #08c6ab;
+            padding: 0;
+
         }
         .cv .title {
-            font-size: 3rem;
+            font-size: 2rem;
             color: #5affe7;
             font-weight: bold;
-
+            padding: 0;
+            padding-bottom: 40px;
         }
         .cv .experience {
             grid-column-start: 1;
@@ -314,6 +328,13 @@ main .cv {
             color: white;
 
             margin-bottom: 2%;
+        }
+        .cv .job-title {
+            color: white;
+            font-size: 3rem;
+            padding: 0;
+            padding-bottom: 5px;
+
         }
 
         .cv ul {
