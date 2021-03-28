@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"> <!-- Awesome fonts kit for icons -->
+        <link rel="stylesheet" href="resources/style.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  <!-- Import JQuery -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+        <div id="navbar-placeholder"></div>  <!-- Navbar -->
+        <script>
+            $(function(){
+              $("#navbar-placeholder").load("page-elements/navbar.html");
+            }); </script>
+
+        <main id="main"> <!-- The main page content -->
+            <div class="portfolio">
+                <div class="port-explantion"><p>Explanation</p></div>
+                <div class="card-holder">
+
+                    <a href="#" class="card">
+                        <div class="card-description">
+                            <h1>Hey</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, debitis sint nemo consequuntur veniam dolor assumenda est illo nostrum eveniet placeat aperiam quidem qui maxime porro facilis vero, ut laborum!</p>
+
+                        </div>
+                    </a>
+
+                    <a href="#" class="card">
+                        <div class="card-description">
+                            <h1>Hey</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, debitis sint nemo consequuntur veniam dolor assumenda est illo nostrum eveniet placeat aperiam quidem qui maxime porro facilis vero, ut laborum!</p>
+                        </div>
+                        <div class="project-window" >
+                            <img src="resources\images\projects_img\img-river.jpg">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </main>
+   </body>
+
+    <div id="footer-placeholder"></div>  <!-- Footer -->
+    <script>
+        $(function(){
+          $("#footer-placeholder").load("page-elements/footer.html");
+        }); </script>
+
+</html>

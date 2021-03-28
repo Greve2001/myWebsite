@@ -10,8 +10,16 @@ font-family: 'Ubuntu', sans-serif;
 */
 
 :root {
-    /* Navbar */
-    --nav-height: 100px 
+    --nav-height: 100px;
+
+    --content-width: 75%;
+    
+    --text-color: white;
+    --text-negative-color: black;
+    --text-shadow-color: grey;
+    --primary-color: #5affe7;
+    --secondary-color: #08c6ab;
+    --background-color: #212B38;
 }
 
 * {
@@ -24,7 +32,7 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 body {
-    background-color: #212B38;
+    background-color: var(--background-color);
 }
 
 h1 {
@@ -49,13 +57,13 @@ p, li, ul{
 }
 
 h1, h2, h3, h4, h5, h6, p, li, ul {
-    color: white;
+    color: var(--text-color);
 
     padding: 10px;
 }
 
 em, strong {
-    color: #5affe7;
+    color: var(--primary-color);
     font-size: 2rem;
     font-style: normal;
     font-weight: bold;
@@ -67,7 +75,7 @@ main {
 }
 
 .content-container {
-    width: 75%;
+    width: var(--content-width);
 }
 
 
@@ -84,8 +92,8 @@ main {
     width: 100%;
     height: var(--nav-height);
 
-    color: white;
-    text-shadow: 3px 3px grey;
+    color: var(--text-color);
+    text-shadow: 3px 3px var(--text-shadow-color);
     background: rgba(33, 43, 56, 0.9); /* #212b38 */
     /* border-bottom: 2px solid white; */
 }
@@ -164,8 +172,8 @@ main {
 
 /* Navbar hovers */
 .navbar #nav-icon:hover, .nav-links ul li a:hover {
-    color: #5affe7;
-    text-shadow: 2px 2px #08c6ab;
+    color: var(--primary-color);
+    text-shadow: 2px 2px var(--secondary-color);
 }
 
 
@@ -201,7 +209,7 @@ main {
         align-items: center;
         justify-content: center;
 
-        color: white;
+        color: var(--text-color);
 
         width: 50%;
     }
@@ -216,7 +224,7 @@ footer {
     
     width: 100%;
     height: 140px;
-    color: #5affe7;
+    color: var(--primary-color);
 
     display: flex;
     align-items: center;
@@ -239,7 +247,7 @@ footer {
         }
 
         .footer-icon-container i:hover {
-            color: white;
+            color: var(--text-color);
         }
                                         /* FOOTER END */
 
@@ -262,7 +270,7 @@ main .cv {
         justify-content: center;
     }
         .cv .cv-grid {
-            width: 75%;
+            width: var(--content-width);
             height: auto;
             /* background-color: rgb(54, 54, 54); */
 
@@ -308,13 +316,13 @@ main .cv {
 
         }
         .cv .location {
-            color: #08c6ab;
+            color: var(--secondary-color);
             padding: 0;
 
         }
         .cv .title {
             font-size: 2rem;
-            color: #5affe7;
+            color: var(--primary-color);
             font-weight: bold;
             padding: 0;
             padding-bottom: 40px;
@@ -325,12 +333,12 @@ main .cv {
 
             font-size: 4rem;
             font-weight: bold;
-            color: white;
+            color: var(--text-color);
 
             margin-bottom: 2%;
         }
         .cv .job-title {
-            color: white;
+            color: var(--text-color);
             font-size: 3rem;
             padding: 0;
             padding-bottom: 5px;
@@ -344,6 +352,95 @@ main .cv {
 
          }
                                         /* CV GRID END */
+
+                                        /* PORTFOLIO */
+.portfolio {
+    min-height: 500px;
+    width: var(--content-width);
+    margin-top: 100px;
+}
+    .card-holder {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+        .card {
+            box-sizing: border-box;
+            width: 45%;
+            height: 300px;
+            margin: 0;
+            padding: 0;
+
+            border: 1px solid var(--primary-color) ;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex: row nowrap;
+            align-items: flex-end;
+
+            cursor: pointer;
+            
+            
+
+
+        }
+            .card .project-window {
+                flex: none;
+                width: 100%;
+                height: 100%;
+                margin-left: -100%;
+                z-index: 2;
+                
+            }
+                .card .project-window img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+            .card-description {
+                background-color: var(--primary-color);
+                width: 100%;
+                height: 20%;
+
+                z-index: 3;
+
+                flex: none;
+                display: flex;
+                justify-content: center;
+
+                transition: height 800ms ease-out;
+            }
+
+                .card-description h1 {
+                    display: flex;
+                    color: var(--text-negative-color);
+                    font-size: 30px;
+
+                }
+                .card-description p {
+                    display: none;
+                    color: var(--text-negative-color);
+                    font-size: 20px;
+                }
+                              
+                
+    .card:hover .card-description {
+        height: 100%;   
+    }
+    .card:hover .card-description h1 {
+        display: none;
+    }
+    .card:hover .card-description p {
+        display: flex;
+    }
+                                        /* PORTFOLIO END */
+
+
 
 
 
