@@ -1,0 +1,84 @@
+.portfolio {
+    min-height: 500px;
+    width: var(--content-width);
+    margin-top: 100px;
+}
+    .card-holder {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+        .card {
+            box-sizing: border-box;
+            width: 45%;
+            height: 300px;
+            margin: 0;
+            padding: 0;
+
+            border: 1px solid var(--primary-color) ;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex: row nowrap;
+            align-items: flex-end;
+
+            cursor: pointer;
+            
+            
+
+
+        }
+            .card .project-window {
+                flex: none;
+                width: 100%;
+                height: 100%;
+                margin-left: -100%;
+                z-index: 2;
+                
+            }
+                .card .project-window img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+            .card-description {
+                background-color: var(--primary-color);
+                width: 100%;
+                height: 20%;
+
+                z-index: 3;
+
+                flex: none;
+                display: flex;
+                justify-content: center;
+
+                transition: height 800ms ease-out;
+            }
+
+                .card-description h1 {
+                    display: flex;
+                    color: var(--text-negative-color);
+                    font-size: 30px;
+
+                }
+                .card-description p {
+                    display: none;
+                    color: var(--text-negative-color);
+                    font-size: 20px;
+                }
+                              
+                
+    .card:hover .card-description {
+        height: 100%;   
+    }
+    .card:hover .card-description h1 {
+        display: none;
+    }
+    .card:hover .card-description p {
+        display: flex;
+    }

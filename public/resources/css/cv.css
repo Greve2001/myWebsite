@@ -1,0 +1,96 @@
+main .cv {
+    display: flex;
+    justify-content: center;
+}
+
+    .cv .grid-container {
+        position: relative;
+        top: 100px;
+        width: 100%;
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+    }
+        .cv .cv-grid {
+            width: var(--content-width);
+            height: auto;
+            /* background-color: rgb(54, 54, 54); */
+
+            display: grid;
+            grid-auto-rows: minmax(150px, auto); /* Should be auto at max */
+
+            grid-row-gap: 60px;
+            grid-column-gap: 10px;
+        }
+            .cv .gridingrid {
+                display: grid;
+                grid-template-columns: 5fr 12fr;
+                grid-row-gap: 10px;
+                grid-column-gap: 10px;
+                padding: 10px;
+                margin-bottom: 100px;
+                /* border: 1px solid black; */
+            }
+
+            .cv .left {
+
+            }
+
+            .cv .right {
+
+            }
+
+
+            .cv .working-history {
+
+            }
+            .cv .education {
+                
+            }
+            .cv .software-experiences {
+
+            }
+
+
+        .cv .date {
+            font-style: italic;
+            padding: 0;
+
+        }
+        .cv .location {
+            color: var(--secondary-color);
+            padding: 0;
+
+        }
+        .cv .title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            padding: 0;
+            padding-bottom: 40px;
+        }
+        .cv .experience {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--text-color);
+
+            margin-bottom: 2%;
+        }
+        .cv .job-title {
+            color: var(--text-color);
+            font-size: 3rem;
+            padding: 0;
+            padding-bottom: 5px;
+
+        }
+
+        .cv ul {
+            margin-left: 30px;
+        }
+         .cv ul li {
+
+         }
