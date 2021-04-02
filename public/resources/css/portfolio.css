@@ -1,3 +1,5 @@
+@import "default.css";
+
 .portfolio {
     min-height: 500px;
     width: var(--content-width);
@@ -82,3 +84,31 @@
     .card:hover .card-description p {
         display: flex;
     }
+
+
+    /* inside each project */
+.project-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .right-side {
+        display: flex;
+        align-items: center;
+    }
+        .last-updated {
+            border-radius: 10px;
+            background-color: var(--text-shadow-color);
+            margin-left: 10px;
+            
+        }
+        .github {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        .github a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
