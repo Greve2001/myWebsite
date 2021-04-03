@@ -116,12 +116,15 @@ main {
                                         /* NAVBAR */
 .navbar {
     display: flex;
+    flex-direction: column;
+}
+
+.nav-desktop {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
-
-    opacity: 100%;
 
     width: 100%;
     height: var(--nav-height);
@@ -131,6 +134,7 @@ main {
     background: rgba(33, 43, 56, 0.9); /* #212b38 */
     /* border-bottom: 2px solid white; */
 }
+
     .nav-name {
         width: 55%;
         height: var(--nav-height);
@@ -199,6 +203,7 @@ main {
     .navbar #nav-icon {
         margin: 0 40px;
         display: none;
+        cursor: pointer;
 
         transition: all 0.2s linear;
     }
@@ -213,14 +218,70 @@ main {
 
 /* I'll take care of the media rules later */
 @media only screen and (max-width: 1150px) {
+    /* Left side */
+    #nav-init {
+        display: flex;
+    }
+    #nav-name {
+        display: none;
+    }    
+}
+@media only screen and (max-width: 950px){
+    /* Right Side */
     .navbar #nav-icon {
         display: flex;
     }
-    .nav-links ul {
+    .nav-links #desktop {
         display: none;
+    }
+    .nav-links #mobile {
+        display: flex;
     }
 }
 
+/* Desktop media*/
+@media only screen and (min-width: 950px){
+    .nav-mobile {
+        display: none !important;
+    }
+}
+
+
+/* Mobile*/
+.nav-mobile {
+    /* overflow: hidden; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    position: fixed;
+
+    width: 100%;
+    margin-top: var(--nav-height);
+    height: calc(var(--nav-height) * 2);
+
+    color: var(--text-color);
+    text-shadow: 3px 3px var(--text-shadow-color);
+    background: rgba(33, 43, 56, 0.9); /* #212b38 */
+    /* border-bottom: 2px solid white; */
+}
+.nav-mobile .nav-links {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-mobile .nav-links ul {
+    flex-direction: column;
+    height: 100%;
+}
+.nav-mobile .nav-links ul li {
+    margin: 0;
+    padding: 0;
+}
+.nav-mobile.active {
+    display: flex;
+}
 
 
 .pushUnderNav {

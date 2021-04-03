@@ -1,21 +1,35 @@
 <header> <!-- The navigation bar -->
+    <script src="resources/scripts/navbar.js"></script>
     <div class="navbar">
-        <div class="nav-name">
-            <a href="index.html"><img src="resources/images/general/me_croppedmore.jpg" width="80px" height="80px"></a>
-            <a href="index.html" id="nav-name">Frederik Greve Petersen</a>
-            <a href="index.html" id="nav-init">F. G. Petersen</a>
-        </div>
-
-        <div class="nav-links">
-            <ul>
-                <li><a href="#">About Me</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <div class="nav-desktop"> <!-- Desktop -->
+            <div class="nav-name">
+                <a href="index.html"><img src="resources/images/general/me_croppedmore.jpg" width="80px" height="80px"></a>
+                <a href="index.html" id="nav-name">Frederik Greve Petersen</a>
+                <a href="index.html" id="nav-init">F. G. Petersen</a>
+            </div>
+    
+            <div class="nav-links">
+                <ul id="desktop">
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
             <div id="nav-icon">
                 <i class="fa fa-bars fa-3x"></i>
             </div>
         </div>
+        <div class="nav-mobile"> <!-- Mobile -->
+            <div class="nav-links">
+                <ul id="mobile">
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
     </div>
 </header> <!-- End of Navbar -->
