@@ -310,23 +310,40 @@ footer {
 }
     .footer-text {
         width: 50%;
-        background-color: #08c6ab;
-        height: 20px;
+        height: 120px;
         margin-left: 10px;
         margin-right: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
+        .footer-text p {
+            color: var(--text-color);
+            font-size: 1.3rem;
+        }
+
+        .footer-phone {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-left: 20px;
+        }
 
     .footer-icon-container {
-        width: 30%;
+        width: 20%;
         height: 100%;
         margin-left: 10px;
         margin-right: 10px;
-
 
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
+        .footer-icon-container a {
+            color: var(--primary-color);
+        }
+
         .footer-icon-container i {
             transition: color 0.2s linear;
             padding: 4px;
