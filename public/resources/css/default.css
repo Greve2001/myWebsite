@@ -62,11 +62,19 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
     padding: 10px;
 }
 
+
 em, strong {
     color: var(--primary-color);
     font-size: 2rem;
     font-style: normal;
     font-weight: bold;
+}
+
+.example { /* A replacement for em just for examples*/
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-style: normal;
+
 }
 
 a {
@@ -79,10 +87,30 @@ main {
     justify-content: center;
 }
 
+                                        /* Content */
 .content-container {
     width: var(--content-width);
     min-height: 800px;
 }
+
+.blog {
+
+}
+    .blog p, .blog .example {
+        font-size: 1.5rem;
+    }
+    .blog em, .blog strong {
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
+
+    .blog .link { /* An acnhor class*/
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-size: 1.5rem;
+    }
+                                        /* Content end */
+
 
 
                                         /* NAVBAR */
@@ -213,14 +241,26 @@ footer {
 
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    flex-flow: row;
+    justify-content: space-between;
 
     border-top: 2px dashed #37465B;
 
 }
+    .footer-text {
+        width: 50%;
+        background-color: #08c6ab;
+        height: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     .footer-icon-container {
         width: 30%;
         height: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+
 
         display: flex;
         justify-content: space-evenly;

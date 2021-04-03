@@ -112,3 +112,7 @@
             text-decoration: none;
             color: var(--primary-color);
         }
+
+.code-snippet {
+    width: 100%;
+}

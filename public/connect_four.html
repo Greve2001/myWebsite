@@ -18,7 +18,7 @@
         </script>
 
         <main> <!-- The main page content -->
-            <div class="content-container">
+            <div class="content-container blog">
               <!-- Page content, blog like -->
               <div class="pushUnderNav"></div>
               <div class="project-header">
@@ -41,6 +41,16 @@
               <p>As I was making in it python and wouldn't use any libraries like pygame or other to make visuals, it would only be displayed as strings in the terminal. Though i use numpy to help me display the matrix more easely. It looks like this: </p>
               <img src="resources/images/projects/connect-four/terminal-matrix-output.jpg" alt="Terminal output of a matrix constructed like a connect four board game">
               <p>This is the example output of a newly started game of connect four</p>
+              <p>I'll only show the most interesting part of the code here. If you are intrested in seeing the whole project, you can find in on my GitHub on the top of the page or <a class="link" href="https://github.com/Greve2001/connect-four" target="_blank">here</a>.</p>
+              <img class="code-snippet" src="resources/images/projects/connect-four/checkfor4-function.jpg" alt="Code snippet of the function that checks if 4 pieces are in a line">
+              <img class="code-snippet" src="resources/images/projects/connect-four/checkfor4-function2.jpg" alt="Code snippet of the function that checks if 4 pieces are in a line">
+              <p>What the code above does, is that it runs through all the values in the matrix. A values that matches that of the current player it runs a loop. The loop checks all the adjacent values of the chosen value. If the adjacent value is the same as the chosen value, it saves the relative direction of the adjacent value to the chosen one, as in a coordinate system. <span class="example"> An example would be (-1, 1), which is to be understood as, 1 up, 1 to the right or -1 down, 1 to the right. </span> This is because that oregon is in the upper left corner of the matrix.
+              <br>
+              These directions are then stored in an array, and when all 8 directions are checked for similar values the array is returned.
+              <br>
+              If there were any directions stored, for the chosen value. Another loops takes these direction, and for each direction up to 4 values will be checked if they are similar to the chosen. First the value with the relative direction of (xdir * 1, ydir * 1) next (xdir * 2, ydir * 2) and so on. This can be formulate as such: <em>(xdir * n, ydir * n)</em>. This allows us to check up to 4 values, in this case. If all the values at the relative indeces exist and have the same value as the chosen. The game will end, since in means four pieces are in a line. However if the value at n->2 is not the same, the loops ends, and continues on, through the other directions. If none of the directions results in a win, it will traverse thorugh the rest of the values in the matrix to do the same
+              </p>
+
             </div>
         </main>
 
