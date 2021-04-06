@@ -27,12 +27,9 @@
             display: flex;
             flex: row nowrap;
             align-items: flex-end;
+            z-index: 2;
 
             cursor: pointer;
-            
-            
-
-
         }
             .card .project-window {
                 flex: none;
@@ -46,6 +43,8 @@
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
+                    
+                    z-index: 2;
                 }
 
             .card-description {
@@ -65,7 +64,7 @@
                 .card-description h1 {
                     display: flex;
                     color: var(--text-negative-color);
-                    font-size: 30px;
+                    font-size: 2vw;
 
                 }
                 .card-description p {

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"> <!-- Awesome fonts kit for icons -->
+        <link rel="stylesheet" href="resources/css/default.css">
+        <link rel="stylesheet" href="resources/css/portfolio.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  <!-- Import JQuery -->
+    </head>
+
+    <body>
+        <div id="navbar-placeholder"></div>  <!-- Navbar -->
+        <script>
+            $(function(){
+              $("#navbar-placeholder").load("page-elements/navbar.html");
+            }); 
+        </script>
+
+        <main> <!-- The main page content -->
+            <div class="content-container blog">
+                <!-- Page content, blog like -->
+                <div class="pushUnderNav"></div>
+                <div class="project-header">
+                  <h1>Fitness - Database</h1>
+                  <div class="right-side">
+                    <div class="github">
+                      <a href="https://github.com/Greve2001/fitness-database" target="_blank"><i class="fa fa-github fa-5x"></i></a>
+                    </div>
+                    <div class="last-updated">
+                      <p>Last Update: 6 April 2021</p>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+                <h4>Introduction</h4>
+                <p>
+                    This project was one I had in my mind for a long time. Since way back have I wanted to make a website/programmer or other type of project, to keep track of workout plan, number of reps and sets and so on.
+                    <br>
+                    I have before started the project but had no real basis for how I imagened, I could make it happen. But after getting into python, and have a resurgens of motivation, I wanted to try making this again.
+                </p>
+                <br>
+
+                <h4>Reading and writing data</h4>
+                <p>
+                    I new i wouldn't wanna spend money on getting a database or even try to use a new one, even though I have work with MySQL before. I know the logic behind database and relation-tables. Therefore I wanted to make a database on my own machine, internally. How hard could it be? First I thought of using JSON as the file format to keep track of the data I'll be storing. But after experimenting with it, i found it would take a lot of work to function correcly. So I therefore change file format, to just a simple .txt file. My firsst thought was that i would store the data in a non defined type but make it have the structure of a list. For example: [data1, data2, data3] and so on. When importing this file I realised that i could not just add to the list. It would have been possible that I read the file, and then overwrote it with the old data just modified. But I realised i could just seperate the data by spacing it. From there i could read the file as a string and use .split() to get a list of the individual pieces of data. 
+                    <br>
+                    Using .split with no arguments was possible since it was singular data stored with spacing. In the relation-tables i've made i would have to find a solution as to how i would go about extracting a list from a string containing the structure of a list of lists. As an example: [ [0, [13, 7]], [2, 3] ]. Now by seperating by spacing, would still be possible if it just formatted without this when making a list to an array. But it doesnt. And therefore when splitting by spacing I would get a messed up list, with no correlation between each dataset.
+                    <br>
+                    Through some research I found at python method able to compile a string to python executables.<em>".eval()"</em> Short for evaluate. This method as said takes a string and compiles it to something workable, in this case a list. <br> <em>Safety about eval</em> <br>
+                    Thanks to this method I was now able to use my .txt files to construct usable list, when they contain lists of lists.
+                </p>
+                <br>
+
+                <h4>Database relations</h4>
+                <p>
+                    As I have now explained how I was able to get useable data from .txt files. I'll now cover the database structure.
+                    <br>
+                    Every .txt file saves as data table. For instance the table containing all the exercises have a key, and a value. Or as I'll further use: an id and then the data. This is structed as so. 
+                </p>
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>Data</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>'string'</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>int</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>array</td>
+                    </tr>
+                </table>
+                <p>
+                    A normal database would store the data with a key or id, to use when making relations between each table. But I dont activly store an id value. Becuase the id of a piece of data is the same as the index. Therefore the data with id: "0" is the first in the list. Using the index as the id saves some work having to extract the id from a list, which could look like: [id, data] [id, data]. I wouldn't have to go to the trouble of finding the id by arr[0] I can simply use the index for this.
+                    <br>
+                    Therefore I can just append some data to the .txt file and therefore add it to my database
+                </p>
+                <p>
+                    Making the data tables is simple enough, and not supringsing at all, the relation tables are also!
+                    <br>
+                    The .txt file that serves at the relation table has the exact same structure as the data-tables. A long string with data seperated by space. But instead of have a word or number as data, this time it's lists. The relation table between the exercises and muscles used it would store the exercise, and all the muscles activated when perfom said exercise.
+                    <br>
+                    The structure of this relation would look like; The id to the exercise, and a list of all the id's of activated muscles. Would look something like:
+                    <span class="example">[exercise_id, [muscle_id, another_muscle_id]]</span>
+                    <br>
+                    The id's makes you able to find the exercise when you don't store the exercise itself in the relations table. Therefore by looking at the relation table you can find which exercise uses which muscle, and which muscle gets used in what exercise.
+                </p>
+                <br>
+
+                <h4>Goals</h4>
+                <p>By using this structure I can search trough my database to select exercises serving my needs.</p>
+            </div>
+        </main>
+
+        <div id="footer-placeholder"></div>  <!-- Footer -->
+        <script>
+            $(function(){
+              $("#footer-placeholder").load("page-elements/footer.html");
+            }); </script>
+    </body>
+
+</html>
