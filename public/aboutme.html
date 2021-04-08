@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"> <!-- Awesome fonts kit for icons -->
+        <link rel="stylesheet" href="resources/css/default.css">
+        <link rel="stylesheet" href="resources/css/aboutme.css">
+
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  <!-- Import JQuery -->
+    </head>
+
+    <body>
+        <div id="navbar-placeholder"></div>  <!-- Navbar -->
+        <script>
+            $(function(){
+              $("#navbar-placeholder").load("page-elements/navbar.html");
+            }); 
+        </script>
+
+        <main> <!-- The main page content -->
+            <div class="content-container">
+                <!-- Page content, blog like -->
+                <div class="pushUnderNav"></div>
+                <div class="about-me">
+                    <div class="about-me-header">
+                        <h1>Hi, I'm Frederik</h1>
+                        <h4>I'm glad to make your acquaintance of me.</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magnam quam consequatur explicabo eum? Eius amet perferendis repellendus quam ab itaque beatae earum suscipit adipisci, corrupti cum delectus esse deleniti!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer-placeholder"></div>  <!-- Footer -->
+        <script>
+            $(function(){
+              $("#footer-placeholder").load("page-elements/footer.html");
+            }); </script>
+    </body>
+
+</html>
